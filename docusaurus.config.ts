@@ -10,14 +10,9 @@ const config: Config = {
   favicon: 'img/favicon.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
-  future: {
-    v4: true,
-  },
-
-  // Set the production url of your site here
   url: 'https://docs.commonbond.au',
-  // Set the /<baseUrl>/ pathname under which your site is served
   baseUrl: '/rotator/',
+  trailingSlash: false,
 
   // GitHub pages deployment config.
   organizationName: 'dm-ra-01',
