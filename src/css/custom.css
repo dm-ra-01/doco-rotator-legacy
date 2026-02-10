@@ -1,0 +1,103 @@
+/* Professional Enterprise Theme for Receptor */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --ifm-color-primary: #4f46e5;
+  /* Indigo 600 */
+  --ifm-color-primary-dark: #4338ca;
+  --ifm-color-primary-darker: #3730a3;
+  --ifm-color-primary-darkest: #312e81;
+  --ifm-color-primary-light: #6366f1;
+  --ifm-color-primary-lighter: #818cf8;
+  --ifm-color-primary-lightest: #a5b4fc;
+
+  --ifm-font-family-base: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --ifm-heading-font-family: 'Outfit', sans-serif;
+  --ifm-font-size-base: 17px;
+  --ifm-line-height-base: 1.6;
+
+  --ifm-navbar-background-color: rgba(255, 255, 255, 0.8);
+  --ifm-navbar-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+  --ifm-code-font-size: 90%;
+  --docusaurus-highlighted-code-line-bg: rgba(79, 70, 229, 0.1);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #818cf8;
+  --ifm-color-primary-dark: #6366f1;
+  --ifm-color-primary-darker: #4f46e5;
+  --ifm-color-primary-darkest: #4338ca;
+  --ifm-color-primary-light: #a5b4fc;
+  --ifm-color-primary-lighter: #c7d2fe;
+  --ifm-color-primary-lightest: #e0e7ff;
+
+  --ifm-navbar-background-color: rgba(24, 24, 27, 0.8);
+  --docusaurus-highlighted-code-line-bg: rgba(129, 140, 248, 0.2);
+}
+
+/* Backdrop filter breaks position:fixed children (mobile sidebar) in some browsers.
+     We enable it only for desktop. */
+
+
+@media (min-width: 997px) {
+  .navbar {
+    backdrop-filter: blur(10px);
+  }
+}
+
+@media (max-width: 996px) {
+  .navbar {
+    backdrop-filter: none;
+    background-color: #ffffff;
+  }
+
+  html[data-theme='dark'] .navbar {
+    background-color: #18181b;
+  }
+}
+
+.hero--primary {
+  --ifm-hero-background-color: transparent;
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+  color: #fff;
+}
+
+[data-theme='dark'] .hero--primary {
+  background: linear-gradient(135deg, #09090b 0%, #18181b 100%);
+}
+
+.button--secondary {
+  --ifm-button-background-color: #fff;
+  --ifm-button-color: #4f46e5;
+  --ifm-button-border-color: #e5e7eb;
+  font-weight: 600;
+}
+
+.button--secondary:hover {
+  --ifm-button-background-color: #f9fafb;
+}
+
+.card {
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+[data-theme='dark'] .card {
+  border-color: #27272a;
+  background-color: #18181b;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* ===== Mobile Experience Enhancements ===== */
+/* 
+ * Custom mobile styles have been removed to ensure reliable navigation functionality.
+ * The default Docusaurus mobile theme works out-of-the-box.
+ * If customizations are needed, please add them back incrementally and test each change.
+ */

@@ -1,0 +1,8 @@
+{
+  "label": "Legacy Flutter Reference",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "Reference documentation for the legacy Flutter rotator_worker application. This documentation serves as a migration guide and architectural reference as features are ported to the new Next.js applications."
+  }
+}

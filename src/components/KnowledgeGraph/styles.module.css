@@ -1,0 +1,224 @@
+/* ── Knowledge Graph Container ── */
+
+.container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 60px);
+    overflow: hidden;
+    background: #fafafa;
+}
+
+[data-theme='dark'] .container {
+    background: #09090b;
+}
+
+/* ── Controls Overlay ── */
+
+.controls {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    max-width: 260px;
+}
+
+[data-theme='dark'] .controls {
+    background: rgba(24, 24, 27, 0.85);
+    border-color: #27272a;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Search Input ── */
+
+.searchInput {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #d4d4d8;
+    border-radius: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    background: #fff;
+    color: #18181b;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.searchInput:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+[data-theme='dark'] .searchInput {
+    background: #27272a;
+    color: #e4e4e7;
+    border-color: #3f3f46;
+}
+
+[data-theme='dark'] .searchInput:focus {
+    border-color: #818cf8;
+    box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.2);
+}
+
+.searchInput::placeholder {
+    color: #a1a1aa;
+}
+
+/* ── Legend ── */
+
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-family: 'Outfit', sans-serif;
+    color: #71717a;
+    white-space: nowrap;
+}
+
+[data-theme='dark'] .legendItem {
+    color: #a1a1aa;
+}
+
+.legendDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* ── Tooltip ── */
+
+.tooltip {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    padding: 12px 18px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    max-width: 400px;
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    pointer-events: none;
+    animation: fadeIn 0.15s ease;
+}
+
+[data-theme='dark'] .tooltip {
+    background: rgba(24, 24, 27, 0.92);
+    border-color: #27272a;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.tooltip strong {
+    display: block;
+    font-size: 14px;
+    color: #18181b;
+    margin-bottom: 2px;
+}
+
+[data-theme='dark'] .tooltip strong {
+    color: #f4f4f5;
+}
+
+.tooltipCluster {
+    font-size: 11px;
+    color: #6366f1;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+[data-theme='dark'] .tooltipCluster {
+    color: #818cf8;
+}
+
+.tooltip p {
+    margin: 6px 0 0;
+    font-size: 12px;
+    color: #71717a;
+    line-height: 1.4;
+}
+
+[data-theme='dark'] .tooltip p {
+    color: #a1a1aa;
+}
+
+/* ── Loading State ── */
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 16px;
+    font-family: 'Outfit', sans-serif;
+    color: #71717a;
+    font-size: 14px;
+}
+
+.spinner {
+    width: 28px;
+    height: 28px;
+    border: 3px solid #e5e7eb;
+    border-top-color: #4f46e5;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+[data-theme='dark'] .spinner {
+    border-color: #3f3f46;
+    border-top-color: #818cf8;
+}
+
+/* ── Animations ── */
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* ── Mobile Adjustments ── */
+
+@media (max-width: 768px) {
+    .controls {
+        max-width: calc(100% - 32px);
+    }
+
+    .tooltip {
+        max-width: calc(100% - 32px);
+        bottom: 12px;
+    }
+}
