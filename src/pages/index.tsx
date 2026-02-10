@@ -31,11 +31,17 @@ const SECTIONS = [
     description: 'The original plan for migrating from Flutter to the modern Next.js platform.',
     link: '/docs/legacy-flutter/original-migration-plan',
   },
+  {
+    emoji: '🧠',
+    title: 'Knowledge Map',
+    description: 'Interactive graph of all legacy documentation and their relationships.',
+    link: '/knowledge-graph',
+  },
 ];
 
 const SIBLINGS = [
-  { label: 'Receptor Technical Docs', href: 'https://docs.commonbond.au/receptor/', emoji: '⚙️' },
-  { label: 'Corporate & Governance', href: 'https://docs.commonbond.au/corporate/', emoji: '🏛️' },
+  { label: 'Receptor Ecosystem', href: 'https://docs.commonbond.au/receptor/', emoji: '⚙️' },
+  { label: 'Common Bond Corporate', href: 'https://docs.commonbond.au/corporate/', emoji: '🏛️' },
 ];
 
 function HeroSection() {
@@ -52,8 +58,8 @@ function HeroSection() {
           <Link className={styles.heroPrimary} to="/docs/intro">
             Browse Archive
           </Link>
-          <Link className={styles.heroSecondary} to="/docs/rotator-worker/">
-            🔍 Rotator Worker Docs
+          <Link className={styles.heroSecondary} to="/knowledge-graph">
+            🧠 Knowledge Map
           </Link>
         </div>
       </div>

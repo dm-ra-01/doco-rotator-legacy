@@ -52,8 +52,8 @@ const config: Config = {
     navbar: {
       title: 'Rotator Legacy',
       logo: {
-        alt: 'Receptor Logo',
-        src: 'img/receptor-logo.png',
+        alt: 'Rotator Logo',
+        src: 'img/rotator-logo.png',
       },
       items: [
         {
@@ -62,6 +62,7 @@ const config: Config = {
           position: 'left',
           label: 'Archive',
         },
+        { to: '/knowledge-graph', label: '🧠 Map', position: 'left' },
         {
           href: 'https://github.com/dm-ra-01/doco-rotator-legacy',
           label: 'GitHub',
@@ -73,15 +74,15 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Links',
+          title: 'Documentation Ecosystem',
           items: [
-            {
-              label: 'Corporate Docs',
-              href: 'https://docs.commonbond.au/corporate',
-            },
             {
               label: 'Receptor Ecosystem',
               href: 'https://docs.commonbond.au/receptor',
+            },
+            {
+              label: 'Common Bond Corporate',
+              href: 'https://docs.commonbond.au/corporate',
             },
           ],
         },
