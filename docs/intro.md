@@ -6,8 +6,8 @@ This site contains forensic documentation, architecture analysis, and technical 
 
 ## 🗄️ Archive Contents
 
-- **Rotator Worker**: Deep dive into the core logic, services, and UI components of the original workforce management tool.
-- **Legacy Flutter Reference**: Technical inventories and architecture analysis of the original Flutter codebase.
+- **[Rotator Worker](./rotator-worker/)**: Deep dive into the core logic, services, and UI components of the original workforce management tool.
+- **[Legacy Flutter Reference](./legacy-flutter/)**: Technical inventories and architecture analysis of the original Flutter codebase.
 
 ## 🧠 Knowledge Map
 
