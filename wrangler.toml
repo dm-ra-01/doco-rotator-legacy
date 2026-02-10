@@ -1,0 +1,17 @@
+# ──────────────────────────────────────────────
+# Cloudflare Pages — Rotator Legacy Documentation
+# Site: https://docs.commonbond.au/rotator/
+# ──────────────────────────────────────────────
+
+name = "doco-rotator-legacy"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = "build"
+
+# ── Observability ────────────────────────────
+[observability]
+enabled = true
+
+[observability.logs]
+enabled = true
+invocation_logs = true
+head_sampling_rate = 1  # 100% sampling — adjust down if traffic grows
