@@ -195,12 +195,12 @@ function GraphInner() {
         const isSearched = !matchedIds || (matchedIds.has(s) && matchedIds.has(t));
 
         if (!isActive || !isSearched) {
-            return isDark ? 'rgba(63, 63, 70, 0.05)' : 'rgba(212, 212, 216, 0.05)';
+            return isDark ? 'rgba(63, 63, 70, 0.03)' : 'rgba(212, 212, 216, 0.03)';
         }
         if (link.type === 'h') {
-            return isDark ? 'rgba(99, 102, 241, 0.25)' : 'rgba(79, 70, 229, 0.15)';
+            return isDark ? 'rgba(99, 102, 241, 0.6)' : 'rgba(79, 70, 229, 0.4)';
         }
-        return isDark ? 'rgba(161, 161, 170, 0.2)' : 'rgba(113, 113, 122, 0.12)';
+        return isDark ? 'rgba(161, 161, 170, 0.4)' : 'rgba(113, 113, 122, 0.3)';
     }, [isDark, hovered, connectedIds, matchedIds]);
 
     if (!graphData || !ForceGraph2D) {
