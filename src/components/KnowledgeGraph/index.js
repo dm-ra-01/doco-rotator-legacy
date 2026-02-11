@@ -79,7 +79,7 @@ function GraphInner() {
 
     // Fetch graph data
     useEffect(() => {
-        fetch(graphJsonUrl)
+        fetch(`${graphJsonUrl}?v=${Date.now()}`)
             .then(r => r.json())
             .then(raw => setGraphData(transformGraph(raw)))
             .catch(err => console.error('Failed to load knowledge graph:', err));
