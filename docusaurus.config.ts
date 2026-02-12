@@ -19,7 +19,6 @@ const config: Config = {
   projectName: 'doco-rotator-legacy',
 
   onBrokenLinks: 'warn', // Allowed for cross-site linking during development
-  onBrokenMarkdownLinks: 'warn',
 
   i18n: {
     defaultLocale: 'en',
@@ -44,6 +43,9 @@ const config: Config = {
 
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
   },
   themes: ['@docusaurus/theme-mermaid'],
 
